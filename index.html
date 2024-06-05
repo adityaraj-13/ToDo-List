@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--header with title welcome msg and a clock-->
+    <header>
+        <div id="clock"></div>
+        <h1>To-Do Tasks</h1>
+        <p id="welcome-msg"></p>
+        
+    </header>
+    <!--container consisiting of new task input's  and created task -->
+    <div class="container">
+        <div class="create-task">
+            <h3>Create New Task</h3>
+            <form class="new-task">
+                <label for="task-name">Task Name</label>
+                <input class="task" id="task-name" type="text" placeholder="Enter the task here..." required>
+                <label for="task-date">Due Date</label>
+                <input class="task" id="task-date" type="date" required >
+                <button id="add" class="btn">ADD Task</button>
+            </form>
+        </div>
+        
+        <div class="created-task">
+            <!--ongoing task which has to be completed are included in this box -->
+            <div class="ongoing-task">
+                <h3>Task to be Completed</h3>
+                <ul class="ongoing">  
+                </ul>
+            </div>
+            <!--completed task are included in this box-->
+            <div class="completed-task">
+                <h3>Task Completed</h3>
+                <ul class="completed">  
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+        
+    
+    <script src="logic.js"></script>
+</body>
+</html>
